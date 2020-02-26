@@ -1,0 +1,13 @@
+<%= simple_form_for @restaurant do |f| %>
+<%=   f.input :name  %>
+<%=   f.input :address  %>
+<%=   f.input :phone_number  %>
+<%=   f.input :category  %>
+
+  <%= f.submit 'Create restaurant', class: 'btn btn-success' %>
+
+<% end %>
+
+<%= link_to 'Retour', restaurants_path, class: 'btn btn-success' %>
+
+

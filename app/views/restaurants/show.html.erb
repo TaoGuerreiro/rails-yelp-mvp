@@ -1,0 +1,11 @@
+<h1>Let's indroduce <%=   @restaurant.name %>'s restaurant</h1>
+
+
+<ul> <%   @restaurant.reviews.each do |review| %>
+
+  <li><%= "*" * review.rating  %> <%=  review.content %></li>
+  <% end %>
+</ul>
+<%= render 'reviews/new', review: @review %>
+
+<%= link_to 'Retour', restaurants_path, class: 'btn btn-success' %>
